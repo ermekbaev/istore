@@ -6,12 +6,14 @@ import ProductCard from "./Components/Products/ProductCard";
 
 
 import "./index.css";
+import MainRoutes from "./Routes/MainRoutes";
 
 const App = () => {
   return (
     <div>
-      <ProductCard />
 
+      <Header />
+      <MainRoutes />
     </div>
   );
 };
