@@ -10,6 +10,9 @@ import NotFoundPage from "../pages/NotFoundPage";
 import RentCarPage from "../pages/RentCarPage";
 import ServisesCar from "../pages/ServisesCar";
 
+import Login from "../Components/Auth/Login";
+import Register from "../Components/Auth/Register";
+
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
     {
@@ -56,6 +59,16 @@ const MainRoutes = () => {
     {
       link: "/edit/:id",
       element: <ServisesCar />,
+      id: 9,
+    },
+    {
+      link: "/register",
+      element: <Register />,
+      id: 10,
+    },
+    {
+      link: "/login",
+      element: <Login />,
       id: 9,
     },
   ];
