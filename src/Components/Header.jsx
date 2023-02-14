@@ -19,6 +19,7 @@ const auth = [
 ];
 
 const Header = () => {
+
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const navigate = useNavigate();
@@ -137,6 +138,7 @@ const Header = () => {
       </div>
     </div>
   );
+
 };
 
 export default Header;
