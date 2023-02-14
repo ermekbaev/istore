@@ -1,12 +1,17 @@
 import React from "react";
-import Header from "./Components/Header";
+import AddProduct from "./Components/Products/AddProduct";
+import EditProduct from "./Components/Products/EditProduct";
+
+import ProductCard from "./Components/Products/ProductCard";
+
 
 import "./index.css";
 
 const App = () => {
   return (
     <div>
-      <Header />
+      <ProductCard />
+
     </div>
   );
 };
