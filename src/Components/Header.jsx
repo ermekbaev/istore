@@ -16,10 +16,10 @@ const pages = [
 const auth = [
   { name: "Регистрация", link: "/register", id: 9 },
   { name: "Вход", link: "/login", id: 10 },
+  { name: "Добавление продукта", link: "/addproduct", id: 11 },
 ];
 
 const Header = () => {
-
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const navigate = useNavigate();
@@ -138,7 +138,6 @@ const Header = () => {
       </div>
     </div>
   );
-
 };
 
 export default Header;

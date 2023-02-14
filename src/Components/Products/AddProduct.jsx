@@ -22,10 +22,12 @@ const AddProduct = () => {
     createProduct(newProduct);
   }
   return (
-    <div className="m-auto mt-10 ">
-      <h2 className="text-3xl text-center border-2 border-zinc-900 rounded-full">
-        Add product
-      </h2>
+    <div className="mt-6 m-auto max-w-md text-center pb-12 ">
+      <div>
+        <label className="text-3xl text-center border-2 border-zinc-900 rounded-full">
+          Add product
+        </label>
+      </div>
       <select value={category} onChange={(e) => setCategory(e.target.value)}>
         <option value="choose category">choose category</option>
         {categories.map((item) => (
