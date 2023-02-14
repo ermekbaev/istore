@@ -5,11 +5,11 @@ const Header = () => {
     <div className="flex">
       <div>
         <ul>
+          <li>POOP</li>
+          <li>Home</li>
+          <li>RentCar</li>
           <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>POOP</li>
         </ul>
       </div>
     </div>
