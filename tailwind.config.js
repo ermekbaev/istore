@@ -6,6 +6,9 @@ module.exports = {
       width: {
         128: "20rem",
       },
+      height: {
+        home: "42.9rem",
+      },
       screens: {
         tablet: "640px",
         // => @media (min-width: 640px) { ... }
