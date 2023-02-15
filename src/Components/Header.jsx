@@ -16,20 +16,20 @@ const pages = [
 const auth = [
   { name: "Регистрация", link: "/register", id: 9 },
   { name: "Вход", link: "/login", id: 10 },
+  { name: "Добавление продукта", link: "/addproduct", id: 11 },
 ];
 
 const Header = () => {
-
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const navigate = useNavigate();
   return (
     <div>
-      <div className="flex items-center justify-between border-b border-gray-400 py-2">
-        <a href="/">
-          <h3 className=" w-1/6 text-center">LOGO</h3>
-        </a>
+      <div className="flex items-center justify-between  py-2  w-full h-20">
         <nav className="flex items-center mr-5">
+          <a href="/">
+            <h3 className=" w-1/6 text-center mx-5">LOGO</h3>
+          </a>
           <section className="MOBILE-MENU flex lg:hidden">
             <div
               className="HAMBURGER-ICON space-y-2 "
@@ -83,22 +83,21 @@ const Header = () => {
               </li>
             ))}
           </ul>
-
-          <div
-            onClick={() => setIsAuthOpen((prev) => !prev)}
-            className="w-1/5 text-right md:w-20 M2:w-16 smallM:w-12"
-          >
-            <div>
-              <button className="mr-6 M2:mr-3 smallM:mr-1.5">
-                <img
-                  src={avatar}
-                  alt="avatar"
-                  className="w-14 h-14  M:w-10 M:h-10 M2:w-9 M2:h-9 smallM:w-8 smallM:h-8"
-                />
-              </button>
-            </div>
-          </div>
         </nav>
+        <div
+          onClick={() => setIsAuthOpen((prev) => !prev)}
+          className="w-1/5 text-right md:w-20 M2:w-16 smallM:w-12"
+        >
+          <div>
+            <button className="mr-6 M2:mr-3 smallM:mr-1.5">
+              <img
+                src={avatar}
+                alt="avatar"
+                className="w-14 h-14  M:w-10 M:h-10 M2:w-9 M2:h-9 smallM:w-8 smallM:h-8"
+              />
+            </button>
+          </div>
+        </div>
         <style>{`
         .hideMenuNav {
            display: none;
@@ -121,24 +120,27 @@ const Header = () => {
             display: none;
          }
          .showAuth {
-            float:right;
+            position:absolute;
+            z-index:2;
+            right: 0px;
+            top: 60px;
+            text-align: right;
+            background-color: white;
          }
          `}</style>
       </div>
-      <div className="mr-5">
-        <ul className={isAuthOpen ? "showAuth" : "hideAuth"}>
-          {auth.map((auth) => (
-            <li onClick={() => setIsAuthOpen(false)} key={auth.id}>
-              <Link to={auth.link}>
-                <span>{auth.name}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+
+      <ul className={isAuthOpen ? "showAuth" : "hideAuth"}>
+        {auth.map((auth) => (
+          <li onClick={() => setIsAuthOpen(false)} key={auth.id}>
+            <Link to={auth.link}>
+              <span>{auth.name}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-
 };
 
 export default Header;
