@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 import { useProducts } from "../../Contexts/ProductContextProvider";
 
 const AddProduct = () => {
   const { getCategories, categories, createProduct } = useProducts();
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(null);
 
   useEffect(() => {
     getCategories();
   }, []);
+
   function handleSave() {
     let newProduct = new FormData();
     newProduct.append("title", title);
@@ -21,54 +24,111 @@ const AddProduct = () => {
     newProduct.append("image", image);
     createProduct(newProduct);
   }
+
   return (
-    <div className="mt-6 m-auto max-w-md text-center pb-12 ">
-      <div>
-        <label className="text-3xl text-center border-2 border-zinc-900 rounded-full">
-          Add product
-        </label>
+    <div className="mt-6  m-auto max-w-md text-center pb-12">
+      <div className="">
+        <h2 className="mt-10 text-3xl font-bold text-gray-900">
+          Добавить машину
+        </h2>
       </div>
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="choose category">choose category</option>
-        {categories.map((item) => (
-          <option key={item.id} value={item.id}>
-            {item.title}
-          </option>
-        ))}
-      </select>
-      <div className="w-96">
-        <input
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          className="text-center w-96 m-0.5 border-2 border-zinc-900 rounded-full"
-          type="text"
-          placeholder="title"
-        />
-        <input
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          className="text-center w-96 m-0.5 border-2 border-zinc-900 rounded-full"
-          type="text"
-          placeholder="description"
-        />
-        <input
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          className="text-center w-96 m-0.5 border-2 border-zinc-900 rounded-full"
-          type="text"
-          placeholder="price"
-        />
-        <input
-          accept="image/*"
-          type="file"
-          onChange={(e) => setImage(e.target.files[0])}
-        />
-        <button
-          onClick={handleSave}
-          className="text-center w-96 m-0.5 border-2 border-zinc-900 rounded-full"
-        >
-          Add product
-        </button>
+
+      <div className=" backdrop-blur-xl mx-auto rounded-xl shadow-xl p-10 w-full max-w-md">
+        <form action="#" autoComplete="off" className="space-y-6">
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            name=""
+            id=""
+          >
+            <option value="">choose category</option>
+
+            {categories.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.title}
+              </option>
+            ))}
+          </select>
+
+          <div>
+            <label
+              htmlFor="title"
+              className=" float-left block text-sm font-medium text-gray-700"
+            >
+              Title
+            </label>
+            <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
+              <input
+                onChange={(e) => setTitle(e.target.value)}
+                type="text"
+                id="title"
+                required
+                className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
+              text-sm pl-10 w-full"
+                placeholder="Title"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              htmlFor="Description"
+              className=" float-left block text-sm font-medium text-gray-700"
+            >
+              Description
+            </label>
+            <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
+              <input
+                onChange={(e) => setDescription(e.target.value)}
+                type="text"
+                id="description"
+                required
+                className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
+              text-sm pl-10 w-full"
+                placeholder="Description"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              htmlFor="price"
+              className=" float-left block text-sm font-medium text-gray-700"
+            >
+              Price
+            </label>
+            <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
+              <input
+                onChange={(e) => setPrice(e.target.value)}
+                type="text"
+                id="price"
+                required
+                className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
+              text-sm pl-10 w-full"
+                placeholder="Price"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              htmlFor="picture"
+              className="float-left block text-sm font-medium text-gray-700"
+            >
+              Picture
+            </label>
+            <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
+              <input
+                onChange={(e) => setImage(e.target.value)}
+                type="text"
+                id="picture"
+                minLength="8"
+                className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
+              text-sm pl-10 w-full"
+                placeholder="Picture"
+              />
+            </div>
+          </div>
+          <button onClick={handleSave}>Вход</button>
+        </form>
       </div>
     </div>
   );
