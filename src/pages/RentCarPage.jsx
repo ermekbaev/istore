@@ -6,7 +6,7 @@ import one_4 from "../Components/images/4.png";
 
 const RentCarPage = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white ">
       <img className="w-full" src={one_1} alt="здесь фото машины" />
       <div>
         <div className="text-center">
@@ -14,20 +14,18 @@ const RentCarPage = () => {
             АРЕНДА АВТОМОБИЛЕЙ ТОЙОТА В БИШКЕКЕ
           </h2>
           <div className="bg-red-700 w-[97px] h-[3px] rounded ml-[46%] mt-4"></div>
-          <h2 className="mt-[90px] mb-[60px] text-3xl">
+          <h2 className="mt-24 mb-16 text-3xl">
             ЗАПРОСИТЬ ПРЕДЛОЖЕНИЕ ПО АРЕНДЕ
           </h2>
         </div>
-        <div className="flex flex-col m-auto text-lg">
+        <div className="flex flex-col items-center text-lg">
           <h4 className="text-slate-300 text-xl mb-1">
             Пожалуйста, заполните все поля, отмеченные *
           </h4>
           <div className="flex">
             <div>
-              <h3 className="font-extrabold mb-[5px] ">
-                Интересующая модель *
-              </h3>
-              <select className="text-white mr-5 w-[430px] h-[40px] bg-gray-700 ">
+              <h3 className="font-extrabold  mb-1.5">Интересующая модель *</h3>
+              <select className="text-white mr-5 w-72 h-10 bg-gray-700 ">
                 <option value="text">Выберите модель</option>
                 <option value="text">corolla</option>
                 <option value="text">camry</option>
@@ -35,49 +33,45 @@ const RentCarPage = () => {
               {/* //! <p className="text-red-700">Необходимо выбрать модель!</p> */}
             </div>
             <div>
-              <h3 className="font-extrabold mb-[5px]">Дилер *</h3>
-              <select className="bg-gray-700 text-white  w-[183px] w-[430px] h-[40px] ">
+              <h3 className="font-extrabold mb-2">Дилер *</h3>
+              <select className="bg-gray-700 text-white w-72 h-10 ">
                 <option value="text">Тойота Центр Бишкек</option>
               </select>
             </div>
           </div>
           <div className="flex">
             <div>
-              <h3 className="font-extrabold mt-[10px] mb-[5px]">
-                Имя и Фамилия *
-              </h3>
+              <h3 className="font-extrabold mt-2.5 mb-2">Имя и Фамилия *</h3>
               <input
-                className="bg-gray-700 text-white mr-5 w-[183px] w-[430px] h-[40px]"
+                className="bg-gray-700 text-white mr-5 w-72 h-10"
                 type="text"
               />
               {/* //!  <p className="text-red-700">Ваше полное имя обязательно!</p> */}
             </div>
             <div>
-              <h3 className="font-extrabold  mt-[10px] mb-[5px]">
-                Email адрес *
-              </h3>
+              <h3 className="font-extrabold  mt-2.5 mb-2">Email адрес *</h3>
               <input
-                className="bg-gray-700 text-white w-[183px] w-[430px] h-[40px]"
+                className="bg-gray-700 text-white  w-72 h-10"
                 type="text"
               />
               {/*//! <p className="text-red-700">Email адрес обязателен!</p> */}
             </div>
           </div>
           <div>
-            <h3 className="font-extrabold  mt-[10px] mb-[5px]">Телефон *</h3>
+            <h3 className="font-extrabold  mt-2.5 mb-2">Телефон *</h3>
             <div>
-              <select className="bg-gray-700 text-white mr-[10px] w-[100px] h-[40px] ">
+              <select className="bg-gray-700 text-white mr-5 w-72 h-10">
                 <option value="number">+996</option>
                 <option value="number">+7</option>
               </select>
               <input
-                className="bg-gray-700 text-white w-[320px] h-[40px]"
+                className="bg-gray-700 text-white w-72 h-10"
                 type="text"
                 placeholder="706080079"
               />
               {/* //! <p className="text-red-700">Необходимо выбрать модель!</p> */}
             </div>
-            <div className="flex mt-[20px]">
+            <div className="flex mt-4">
               <input
                 className=" font-extrabold"
                 type="checkbox"
@@ -93,10 +87,10 @@ const RentCarPage = () => {
                //!</p> */}
           </div>
           <div className="mt-6 ml-[555px]">
-            <button className="bg-gray-700 text-white mr-4 py-3 px-9">
+            <button className="bg-gray-700 text-white mr-4 py-2 px-[36px]">
               Очистить
             </button>
-            <button className="bg-gray-700 text-white py-3 px-9">
+            <button className="bg-gray-700 text-white py-2 px-[30.5px] ">
               Отправить
             </button>
           </div>
@@ -142,7 +136,7 @@ const RentCarPage = () => {
             </a>
           </div>
         </div>
-        <div className="bg-red-700 w-80 h-1"></div>
+        {/* <div className="bg-red-700 w-80 h-1"></div> */}
       </div>
     </div>
   );

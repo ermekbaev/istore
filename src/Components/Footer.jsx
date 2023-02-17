@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="bg-red-700 w-96 h-1"></div>
+    <div className="bg-black">
+      <div className="bg-red-700 w-80 h-1"></div>
       <div className="pt-20 px-16 pb-20 ">
         <div className="flex">
           <div className="w-3/12 pr-10.5">
@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="flex justify-between w-9/12 pl-14 pt-4 text-base cursor-pointer">
             <div>
               <ul>
-                <li className="text-lg mb-[7px]">My Account</li>
+                <li className="text-lg text-white mb-[7px]">My Account</li>
                 <li className="text-slate-400 py-[5px]">Profile</li>
                 <li className="text-slate-400 py-[5px]">Collections</li>
                 <li className="text-slate-400 py-[5px]">Favourites</li>
@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
             <div>
               <ul>
-                <li className="text-lg mb-[7px]">Marketplace</li>
+                <li className="text-lg text-white mb-[7px]">Marketplace</li>
                 <li className="text-slate-400 py-[5px]">Explore</li>
                 <li className="text-slate-400 py-[5px]">All NFT</li>
                 <li className="text-slate-400 py-[5px]">Collectible</li>
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>{" "}
             <div>
               <ul>
-                <li className="text-lg mb-[7px]">Resources</li>
+                <li className="text-lg text-white mb-[7px]">Resources</li>
                 <li className="text-slate-400 py-[5px]">Help Center</li>
                 <li className="text-slate-400 py-[5px]">Partners</li>
                 <li className="text-slate-400 py-[5px]">Blog</li>
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             <div>
               <ul>
-                <li className="text-lg mb-[7xp]">Company</li>
+                <li className="text-lg text-white mb-[7xp]">Company</li>
                 <li className="text-slate-400 py-[5px]">About Us</li>
                 <li className="text-slate-400 py-[5px]">Careers</li>
                 <li className="text-slate-400 py-[5px]">Support</li>

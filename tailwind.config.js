@@ -9,6 +9,9 @@ module.exports = {
       height: {
         home: "42.9rem",
       },
+      padding: {
+        8.5: "2.2rem",
+      },
       screens: {
         tablet: "640px",
         // => @media (min-width: 640px) { ... }
