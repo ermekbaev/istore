@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AutoMileagePage from "../pages/AutoMileagePage";
 import BuyCarPage from "../pages/BuyCarPage";
 import DetailingStudio from "../pages/DeteilingStudioPage";
-import ForBisnessPage from "../pages/ForBisnessPage";
+import ForBusinessPage from "../pages/ForBusinessPage";
 import HomePage from "../pages/HomePage";
 import ModelsPage from "../pages/ModelsPage";
 import NotFoundPage from "../pages/NotFoundPage";
@@ -53,12 +53,12 @@ const MainRoutes = () => {
       id: 7,
     },
     {
-      link: "/buisness",
-      element: <ForBisnessPage />,
+      link: "/business",
+      element: <ForBusinessPage />,
       id: 8,
     },
     {
-      link: "/edit/:id",
+      link: "/servises",
       element: <ServisesCar />,
       id: 9,
     },
@@ -76,6 +76,11 @@ const MainRoutes = () => {
       link: "/addproduct",
       element: <AddProduct />,
       id: 10,
+    },
+    {
+      link: "*",
+      element: <h1>NON FOUND PAGE</h1>,
+      id: 11,
     },
   ];
 
