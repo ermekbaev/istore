@@ -13,6 +13,7 @@ import ServisesCar from "../pages/ServisesCar";
 import Login from "../Components/Auth/Login";
 import Register from "../Components/Auth/Register";
 import AddProduct from "../Components/Products/AddProduct";
+import RegisterSuccess from "../Components/Auth/RegisterSuccess";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -76,6 +77,11 @@ const MainRoutes = () => {
       link: "/addproduct",
       element: <AddProduct />,
       id: 10,
+    },
+    {
+      link: "/register-success",
+      element: <RegisterSuccess />,
+      id: 11,
     },
   ];
 

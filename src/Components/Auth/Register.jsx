@@ -1,6 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useAuth } from "../../Contexts/AuthContextProvider";
 
 const Register = () => {
+  const [userName, setUserName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirm, setPasswordConfirm] = useState("");
+
+  const { handleRegister, error, loading, setError } = useAuth();
+
+  function handleSave(e) {
+    e.preventDefault();
+    if (
+      !userName.trim() ||
+      !firstName.trim() ||
+      !lastName.trim() ||
+      !email.trim() ||
+      !password.trim() ||
+      !passwordConfirm.trim()
+    ) {
+      alert("заполните все поля");
+    } else {
+      let formData = new FormData();
+      formData.append("username", userName);
+      formData.append("first_name", firstName);
+      formData.append("last_name", lastName);
+      formData.append("email", email);
+      formData.append("password", password);
+      formData.append("password2", passwordConfirm);
+      handleRegister(formData);
+    }
+  }
+
+  useEffect(() => {
+    setError(false);
+  }, []);
+
   return (
     <div className="mt-6  m-auto max-w-md text-center pb-12">
       <div className="">
@@ -8,7 +45,12 @@ const Register = () => {
       </div>
 
       <div className=" bg-white/80 backdrop-blur-xl mt-10 mx-auto  rounded-xl shadow-xl p-10 w-full max-w-md">
-        <form action="#" autoComplete="off" className="space-y-6">
+        <form
+          action="#"
+          autoComplete="off"
+          className="space-y-6"
+          onSubmit={handleSave}
+        >
           <div>
             <label
               htmlFor="name"
@@ -34,12 +76,85 @@ const Register = () => {
                 </svg>
               </div>
               <input
+                onChange={(e) => setUserName(e.target.value)}
                 type="text"
                 id="name"
                 required
                 className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
                 text-sm pl-10 w-full"
-                placeholder="Name"
+                placeholder="User name"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              htmlFor="name"
+              className=" float-left block text-sm font-medium text-gray-700"
+            >
+              User name
+            </label>
+            <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
+              <div className="absolute left-0 pl-3 inset-y-0 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className=" text-gray-500 mt-5 w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+              </div>
+              <input
+                onChange={(e) => setFirstName(e.target.value)}
+                type="text"
+                id="firstName"
+                required
+                className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
+                text-sm pl-10 w-full"
+                placeholder="first name"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              htmlFor="name"
+              className=" float-left block text-sm font-medium text-gray-700"
+            >
+              Name
+            </label>
+            <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
+              <div className="absolute left-0 pl-3 inset-y-0 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className=" text-gray-500 mt-5 w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+              </div>
+              <input
+                onChange={(e) => setLastName(e.target.value)}
+                type="text"
+                id="lastName"
+                required
+                className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
+                text-sm pl-10 w-full"
+                placeholder="Last name"
               />
             </div>
           </div>
@@ -69,6 +184,7 @@ const Register = () => {
                 </svg>
               </div>
               <input
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 id="email"
                 required
@@ -104,6 +220,7 @@ const Register = () => {
                 </svg>
               </div>
               <input
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 id="password"
                 minLength="8"
@@ -139,6 +256,7 @@ const Register = () => {
                 </svg>
               </div>
               <input
+                onChange={(e) => setPasswordConfirm(e.target.value)}
                 type="password"
                 id="password_confirmation"
                 required
@@ -147,6 +265,7 @@ const Register = () => {
                 placeholder="Confirm password"
               />
             </div>
+            <button>Register</button>
           </div>
         </form>
       </div>

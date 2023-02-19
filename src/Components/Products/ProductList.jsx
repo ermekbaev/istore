@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Pagination } from "react-bootstrap";
+
 import { useSearchParams } from "react-router-dom";
-import { useProducts } from "../context/ProductContextProvider";
+import { useProducts } from "../../Contexts/ProductContextProvider";
 import ProductCard from "./ProductCard";
 
 const ProductList = () => {
@@ -11,9 +11,11 @@ const ProductList = () => {
 
   function getPagesCount() {
     let pageCountArr = [];
+
     for (let i = 1; i <= pages; i++) {
       pageCountArr.push(i);
     }
+
     return pageCountArr;
   }
 
@@ -22,7 +24,9 @@ const ProductList = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    setSearchParams({ page: currentPage });
+    setSearchParams({
+      page: currentPage,
+    });
   }, [currentPage]);
 
   useEffect(() => {
@@ -36,25 +40,23 @@ const ProductList = () => {
           <ProductCard item={item} key={item.id} />
         ))}
       </div>
-      <Pagination>
-        <Pagination.Prev onClick={() => setCurrentPage(currentPage - 1)} />
+      <div>
+        <div onClick={() => setCurrentPage(currentPage - 1)} />
+
         {getPagesCount().map((item) =>
           item === currentPage ? (
-            <Pagination.Item
-              onClick={() => setCurrentPage(item)}
-              active
-              key={item}
-            >
+            <button onClick={() => setCurrentPage(item)} active key={item}>
               {item}
-            </Pagination.Item>
+            </button>
           ) : (
-            <Pagination.Item onClick={() => setCurrentPage(item)} key={item}>
-              {item}{" "}
-            </Pagination.Item>
+            <button onClick={() => setCurrentPage(item)} key={item}>
+              {item}
+            </button>
           )
         )}
-        <Pagination.Next onClick={() => setCurrentPage(currentPage + 1)} />
-      </Pagination>
+
+        <button onClick={() => setCurrentPage(currentPage + 1)} />
+      </div>
     </div>
   );
 };
