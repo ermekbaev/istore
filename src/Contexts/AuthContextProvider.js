@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -94,6 +95,7 @@ const AuthContextProvider = ({ children }) => {
     handleLogout,
   };
   return <authContext.Provider value={values}>{children}</authContext.Provider>;
+
 };
 
 export default AuthContextProvider;
