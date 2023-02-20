@@ -27,7 +27,6 @@ const Header = () => {
 
   const { user, handleLogout, chekAuth } = useAuth();
 
-  console.log(user);
   return (
     <div>
       <div className="flex items-center justify-between  py-2  w-full h-20">
@@ -67,11 +66,11 @@ const Header = () => {
                 {pages.map((page) => (
                   <li
                     onClick={() => setIsNavOpen(false)}
-                    className=" lg:text-sm L:text "
+                    className=""
                     key={page.id}
                   >
                     <Link to={page.link}>
-                      <span>{page.name}</span>
+                      <span className="lg:text">{page.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -83,14 +82,16 @@ const Header = () => {
             {pages.map((page) => (
               <li className="" key={page.id}>
                 <Link to={page.link}>
-                  <span>{page.name}</span>
+                  <span className=" L:text-lg lg:text-xs ">{page.name}</span>
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
         <div className="flex items-center">
-          <span className="block ">{user ? user : "No auth user"}</span>
+          <span className="block L:text-lg lg:text-xs">
+            {user ? user : "No auth user"}
+          </span>
           <div
             onClick={() => setIsAuthOpen((prev) => !prev)}
             className="flex w-3/5 text-right md:w-20 M2:w-16 smallM:w-12"
