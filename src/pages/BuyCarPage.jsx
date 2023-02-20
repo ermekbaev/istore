@@ -1,7 +1,12 @@
 import React from "react";
+import SearchBar from "../Func/SearchBar";
 
 const BuyCarPage = () => {
-  return <div>BuyCarPage</div>;
+  return (
+    <>
+      <SearchBar />
+    </>
+  );
 };
 
 export default BuyCarPage;
