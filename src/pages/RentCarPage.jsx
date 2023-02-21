@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import one_1 from "../Components/images/1.png";
 import one_2 from "../Components/images/2.png";
 import one_3 from "../Components/images/3.png";
@@ -137,7 +137,7 @@ const RentCarPage = () => {
               <hr className="mt-2" />
             </a>
           </div>
-        </div>  
+        </div>
         {/* <div className="bg-red-700 w-80 h-1"></div> */}
       </div>
     </div>

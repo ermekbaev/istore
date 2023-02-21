@@ -1,4 +1,7 @@
 import React from "react";
+import one_1 from "../Components/images/1.spess.png";
+import one_2 from "../Components/images/2.spess.png";
+import one_3 from "../Components/images/3.spess.png";
 
 const SpessPage = () => {
   return (
@@ -8,7 +11,7 @@ const SpessPage = () => {
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <img
               class="h-40 sm:h-auto w-full object-cover"
-              src="https://picsum.photos/id/1005/800/600"
+              src={one_1}
               alt="Картинка 1"
             />
             <div class="px-4 py-6 text-center">
@@ -32,7 +35,7 @@ const SpessPage = () => {
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <img
               class="h-40 sm:h-auto w-full object-cover"
-              src="https://picsum.photos/id/1005/800/600"
+              src={one_2}
               alt="Картинка 1"
             />
             <div class="px-4 py-6 text-center">
@@ -57,7 +60,7 @@ const SpessPage = () => {
         <div class="bg-white rounded-lg overflow-hidden shadow-lg">
           <img
             class="h-40 sm:h-auto w-full object-cover"
-            src="https://picsum.photos/id/1005/800/600"
+            src={one_3}
             alt="Картинка 1"
           />
           <div class="px-4 py-6 text-center">

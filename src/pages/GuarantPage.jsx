@@ -1,10 +1,10 @@
 import React from "react";
-import one_1 from "../Components/images/1.gur.png";
+import one_1 from "../Components/images/1.gar.png";
 
 const GuarantPage = () => {
   return (
     <div>
-      <img className="w-full" src={one_1} alt="фото машины" />
+      <img className="w-full" src={one_1} al  t="фото машины" />
       <div>
         <div className="mt-20 mb-20 mx-24">
           <h2 className="text-3xl text-center max-lg:text-2xl">

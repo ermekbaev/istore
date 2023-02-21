@@ -21,7 +21,7 @@ const Pagination = () => {
   }, [currentPage]);
 
   return (
-    <div className="bg-gray-100 rounded-full flex items-center px-4 py-2">
+    <div className="bg-gray-100 rounded-full flex items-center px-4 py-2 mu">
       <button
         className="bg-gray-200 text-gray-700 rounded-full py-2 px-4 mr-2"
         onClick={handlePreviousPage}

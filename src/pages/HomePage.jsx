@@ -5,51 +5,51 @@ import one_3 from "../Components/images/3.1.png";
 
 const HomePage = () => {
   return (
-    <div class="flex flex-col md:flex-row justify-between w-full h-full">
-      <div class="md:w-1/5 md:max-lg:w-full md:text-center md:m-4">
-        <h2 class="text-3xl font-bold">
+    <div className="flex justify-between w-full h-full md:max-lg:inline-block">
+      <div className=" ml-36 my-28 w-1/5 md:max-lg:w-full md:max-lg:text-center md:m-4">
+        <h2 className=" text-3xl font-bold md: ">
           Добро пожаловать! Что Вас интересует?
         </h2>
-        <div class="bg-red-700 w-16 h-0.5 mb-10 mt-5 mx-auto md:max-lg:mx-0"></div>
-        <div class="text-lg text-center">
+        <div className="bg-red-700 w-16 h-0.5 mb-10 mt-5 md:max-lg:mx-auto"></div>
+        <div className=" text-lg text-center md:max-lg:text-center">
           <ul>
-            <li class="h-14 opacity-70 transition-opacity hover:opacity-100 hover:bg-black hover:text-white flex justify-center items-center my-5">
-              <a class="" href="#">
+            <li className="m-5 h-14 hover:bg-black hover:text-white flex justify-center items-center ">
+              <a className="" href="#">
                 Записаться на тест-драйв
               </a>
             </li>
-            <li class="h-14 opacity-70 transition-opacity hover:opacity-100 hover:bg-black hover:text-white flex justify-center items-center my-5">
-              <a class="" href="#">
+            <li className="m-5 h-14 hover:bg-black hover:text-white flex justify-center items-center">
+              <a className="" href="#">
                 Прайс-листы и брошюры
               </a>
             </li>
-            <li class="h-14 opacity-70 transition-opacity hover:opacity-100 hover:bg-black hover:text-white flex justify-center items-center my-5">
-              <a class="" href="#">
+            <li className="m-5 h-14 hover:bg-black hover:text-white flex justify-center items-center">
+              <a className="" href="#">
                 Гарантия Toyota Relax
               </a>
             </li>
-            <li class="h-14 opacity-70 transition-opacity hover:opacity-100 hover:bg-black hover:text-white flex justify-center items-center my-5">
-              <a class="" href="#">
+            <li className="m-5 h-14 hover:bg-black hover:text-white flex justify-center items-center">
+              <a className="" href="#">
                 Кредитное предложение
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="w-full md:w-7/12">
+      <div className="w-8/12 h-auto">
         <img
-          class="w-full h-auto md:max-w-[720px] md:h-[300px]"
+          className="w-full lg:max-xl:w-[720px] lg:max-xl:h-[300px] md:max-lg:h-49"
           src={one_1}
           alt="фото машины"
         />
-        <div class="flex flex-col md:flex-row">
+        <div className="flex">
           <img
-            class="w-full h-auto md:w-1/2 md:max-w-[341px] md:h-[242px] my-4 md:my-0"
+            className="w-full lg:max-xl:w-[341px] lg:max-xl:h-[242px] md:max-lg:w-[391px]"
             src={one_2}
             alt="фото машины"
           />
           <img
-            class="w-full h-auto md:w-1/2 md:max-w-[341px] md:h-[242px] my-4 md:my-0"
+            className="w-full lg:max-xl:w-[341px] lg:max-xl:h-[242px] md:max-lg:w-[391px]"
             src={one_3}
             alt="фото машины"
           />

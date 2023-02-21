@@ -74,9 +74,9 @@ const ForBusinessPage = () => {
       </div>
       <div>
         <h2 className="text-3xl text-center max-lg:text-2xl mb-20">
-          МОДЕЛЬНЫЙ РЯД
+          МАШИННЫЙ РЯД
         </h2>
-        <div className="flex flex-wrap mx-10">
+        <div className="grid gap-x-8 gap-y-4 grid-cols-3">
           <div>
             <img className="" src={one_2} alt="фото машины" />
             <p></p>

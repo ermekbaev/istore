@@ -3,6 +3,7 @@ import one_1 from "../Components/images/1.rem.png";
 import one_2 from "../Components/images/2.rem.png";
 import one_3 from "../Components/images/3.rem.png";
 import one_4 from "../Components/images/4.rem.png";
+
 const RemPage = () => {
   return (
     <div>

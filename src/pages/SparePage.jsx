@@ -1,4 +1,7 @@
 import React from "react";
+import img_1 from "../Components/images/1.sper.png";
+import img_4 from "../Components/images/1.sper.png";
+import img_5 from "../Components/images/1.sper.png";
 
 const SparePage = () => {
   return (

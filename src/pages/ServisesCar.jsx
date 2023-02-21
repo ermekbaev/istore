@@ -7,16 +7,16 @@ const ServisesCar = () => {
       <div class="w-full md:w-1/2 md:pr-4">
         <ul class="text-2xl cursor-pointer">
           <li class="mt-10 opacity-50 transition-opacity hover:opacity-100">
-            <a href="">Гарантия</a>
+            <a href="/guarant">Гарантия</a>
           </li>
           <li class="mt-6 opacity-50 transition-opacity hover:opacity-100">
-            <a href="">Обслуживание, ремонт, техосмотр</a>
+            <a href="/rem">Обслуживание, ремонт, техосмотр</a>
           </li>
           <li class="mt-6 opacity-50 transition-opacity hover:opacity-100">
-            <a href="">Запчасти и аксессуары</a>
+            <a href="/spare">Запчасти и аксессуары</a>
           </li>
           <li class="mt-6 opacity-50 transition-opacity hover:opacity-100">
-            <a href="">Специальные предложения сервиса</a>
+            <a href="/spess">Специальные предложения сервиса</a>
           </li>
         </ul>
       </div>

@@ -13,6 +13,10 @@ import ServisesCar from "../pages/ServisesCar";
 import Login from "../Components/Auth/Login";
 import Register from "../Components/Auth/Register";
 import AddProduct from "../Components/Products/AddProduct";
+import GuarantPage from "../pages/GuarantPage";
+import RemPage from "../pages/RemPage";
+import SpessPage from "../pages/SpessPage";
+import SparePage from "../pages/SparePage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -70,17 +74,37 @@ const MainRoutes = () => {
     {
       link: "/login",
       element: <Login />,
-      id: 9,
+      id: 11,
     },
     {
       link: "/addproduct",
       element: <AddProduct />,
-      id: 10,
+      id: 12,
     },
     {
       link: "*",
       element: <h1>NON FOUND PAGE</h1>,
-      id: 11,
+      id: 12,
+    },
+    {
+      link: "/guarant",
+      element: <GuarantPage />,
+      id: 13,
+    },
+    {
+      link: "/rem",
+      element: <RemPage />,
+      id: 14,
+    },
+    {
+      link: "/spare",
+      element: <SparePage />,
+      id: 15,
+    },
+    {
+      link: "/spess",
+      element: <SpessPage />,
+      id: 16,
     },
   ];
 

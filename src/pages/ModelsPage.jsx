@@ -1,7 +1,12 @@
 import React from "react";
+import Pagination from "../Func/Pagination";
 
 const ModelsPage = () => {
-  return <div>ModelsPage</div>;
+  return (
+    <>
+      <Pagination />
+    </>
+  );
 };
 
 export default ModelsPage;
