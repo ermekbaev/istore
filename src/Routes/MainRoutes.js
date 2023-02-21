@@ -106,6 +106,11 @@ const MainRoutes = () => {
       element: <SpessPage />,
       id: 16,
     },
+    {
+      link: "/register-success",
+      element: <RegisterSuccess />,
+      id: 11,
+    },
   ];
 
   return (

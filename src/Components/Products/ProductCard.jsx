@@ -1,24 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useProducts } from "../../Contexts/ProductContextProvider";
 
-const ProductCard = () => {
-  const { categories } = useProducts();
-  const [category, setCategory] = useState("");
+const ProductCard = ({ item }) => {
+  const { deleteProduct } = useProducts();
+  const navigate = useNavigate();
   return (
-    <div className=" text-center mx-auto mt-60 border border-black w-96 ">
-      <h2 className="">Title</h2>
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="choose category">choose category</option>
-        {categories.map((item) => (
-          <option key={item.id} value={item.id}>
-            {item.title}
-          </option>
-        ))}
-      </select>
-      <p>item.price</p>
-      <p>item.category.title</p>
-      <p>item.description</p>
-      <p>item.likes</p>
+    <div className="border border-dark m-3">
+      <img src={item.image} width="200" alt="" />
+      <h3>{item.title}</h3>
+      <p>{item.price}</p>
+      <p>{item.category.title}</p>
+      <p>{item.description}</p>
+      <p>{item.likes}</p>
+
+      {item.is_author ? (
+        <>
+          <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
+          <button onClick={() => deleteProduct(item.id)}>Delete</button>
+        </>
+      ) : null}
     </div>
   );
 };

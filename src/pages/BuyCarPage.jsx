@@ -1,11 +1,11 @@
 import React from "react";
-import SearchBar from "../Func/SearchBar";
+import ProductList from "../Components/Products/ProductList";
 
 const BuyCarPage = () => {
   return (
-    <>
-      <SearchBar />
-    </>
+    <div>
+      <ProductList />
+    </div>
   );
 };
 
