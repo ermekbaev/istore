@@ -5,6 +5,7 @@ import one_3 from "../Components/images/3.1.png";
 
 const HomePage = () => {
   return (
+
     <div className="flex justify-between w-full h-full sm:max-md:inline-block md:max-lg:inline-block overflow-x-hidden">
       <div className=" ml-36 my-28 w-1/5 md:max-lg:w-full sm:max-md:text-center md:m-4 sm:max-md:w-3/5">
         <h2 className=" text-3xl font-bold max-[638px]:w-[80%] md:max-lg:m-auto sm:max-md:m-auto  md:max-lg:text-center">
@@ -15,8 +16,9 @@ const HomePage = () => {
         </div>
 
         <div className=" text-lg text-center md:max-lg:text-center">
+
           <ul>
-            <li className="m-5 h-14 hover:bg-black hover:text-white flex justify-center items-center ">
+            <li className="m-5 h-14 hover:bg-black hover:text-white flex justify-center items-center">
               <a className="" href="#">
                 Записаться на тест-драйв
               </a>
@@ -39,11 +41,13 @@ const HomePage = () => {
           </ul>
         </div>
       </div>
+
       <div className="w-8/12 h-auto sm:max-md:flex sm:max-md:w-full sm:max-md:p-4 sm:max-md:flex-col sm:max-md:justify-between md:max-lg:flex md:max-lg:w-full md:max-lg:p-4 md:max-lg:flex-col md:max-lg:justify-between">
         <a href="https://www.toyota-bishkek.kg/new-cars/rav4">
           <img
             className="w-100 sm:max-md:py-4 sm:max-md:w-[70%] sm:max-md:h-72 sm:max-md:m-auto md:max-lg:py-4 md:max-lg:w-[70%] md:max-lg:h-72 md:max-lg:m-auto"
             src={one_1}
+
             alt="фото машины"
           />
         </a>

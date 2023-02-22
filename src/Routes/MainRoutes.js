@@ -17,6 +17,7 @@ import GuarantPage from "../pages/GuarantPage";
 import RemPage from "../pages/RemPage";
 import SpessPage from "../pages/SpessPage";
 import SparePage from "../pages/SparePage";
+import RegisterSuccess from "../Components/Auth/RegisterSuccess";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [

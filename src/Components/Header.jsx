@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../Contexts/AuthContextProvider";
 import avatar from "./images/avatar.png";
@@ -24,17 +24,21 @@ const auth = [
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
-  const navigate = useNavigate();
 
-  const { user, handleLogout, chekAuth } = useAuth();
+  const { user, handleLogout, checkAuth } = useAuth();
 
-  console.log(user);
+  useEffect(() => {
+    if (localStorage.getItem("tokens")) {
+      checkAuth();
+    }
+  }, []);
+
   return (
     <div className="sticky top-0 backdrop-blur-sm bg-white/30">
       <div className="flex items-center justify-between  py-2  w-full h-20">
         <nav className="flex items-center mr-5">
           <a href="/">
-            <h3 className=" w-1/6 text-center mx-5">LOGO</h3>
+            <h3 className=" w-1/6 text-center mx-5">CarRo</h3>
             {/* <img
               className=" w-1/6 w-10 text-center mr-5 ml-5"
               src={one_1}
@@ -73,11 +77,11 @@ const Header = () => {
                 {pages.map((page) => (
                   <li
                     onClick={() => setIsNavOpen(false)}
-                    className=" lg:text-sm L:text "
+                    className=""
                     key={page.id}
                   >
                     <Link to={page.link}>
-                      <span>{page.name}</span>
+                      <span className="lg:text">{page.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -89,14 +93,16 @@ const Header = () => {
             {pages.map((page) => (
               <li className="" key={page.id}>
                 <Link to={page.link}>
-                  <span>{page.name}</span>
+                  <span className=" L:text-lg lg:text-xs ">{page.name}</span>
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
         <div className="flex items-center">
-          <span className="block ">{user ? user : "No auth user"}</span>
+          <span className="block L:text-lg lg:text-xs">
+            {user ? user : "No auth user"}
+          </span>
           <div
             onClick={() => setIsAuthOpen((prev) => !prev)}
             className="flex w-3/5 text-right md:w-20 M2:w-16 smallM:w-12"
