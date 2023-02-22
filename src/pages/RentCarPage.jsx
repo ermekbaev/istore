@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import one_1 from "../Components/images/1.png";
 import one_2 from "../Components/images/2.png";
 import one_3 from "../Components/images/3.png";
@@ -125,14 +125,16 @@ const RentCarPage = () => {
             Впоследствии его можно продлевать в любое удобное время.
           </h4>
         </div>
-        <div className="bg-gray-800 text-white  pt-20 pb-24 text-center">
+        <div className="bg-gray-800 text-white pt-20 pb-24 text-center">
           <h2 className="text-3xl mb-6">Мне нужно</h2>
-          <div>
+          <div className="flex justify-center ">
             <a href="#" className="mr-4 hover:text-slate-300">
               Записаться на тест-драйв
+              <hr className="mt-2" />
             </a>
             <a href="#" className="hover:text-slate-300">
               Запросить предложение
+              <hr className="mt-2" />
             </a>
           </div>
         </div>
