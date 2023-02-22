@@ -15,12 +15,15 @@ const ProductCard = ({ item }) => {
       <p>{item.stock}</p>
       <p>{item.owner_email}</p>
 
-      {item.is_author ? (
+      <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
+      <button onClick={() => deleteProduct(item.id)}>Delete</button>
+
+      {/* {item.is_author ? (
         <>
           <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
           <button onClick={() => deleteProduct(item.id)}>Delete</button>
         </>
-      ) : null}
+      ) : null} */}
     </div>
   );
 };
