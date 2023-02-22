@@ -22,7 +22,7 @@ const RentCarPage = () => {
           <h4 className="text-slate-300 text-xl mb-1">
             Пожалуйста, заполните все поля, отмеченные *
           </h4>
-          <div className="flex">
+          <div className="flex sm:max-md:flex-col">
             <div>
               <h3 className="font-extrabold  mb-1.5">Интересующая модель *</h3>
               <select className="text-white mr-5 w-72 h-10 bg-gray-700 ">
@@ -39,7 +39,7 @@ const RentCarPage = () => {
               </select>
             </div>
           </div>
-          <div className="flex">
+          <div className="flex sm:max-md:flex-col">
             <div>
               <h3 className="font-extrabold mt-2.5 mb-2">Имя и Фамилия *</h3>
               <input
@@ -57,9 +57,11 @@ const RentCarPage = () => {
               {/*//! <p className="text-red-700">Email адрес обязателен!</p> */}
             </div>
           </div>
-          <div>
-            <h3 className="font-extrabold  mt-2.5 mb-2">Телефон *</h3>
-            <div>
+          <div className="sm:max-md:flex-col sm:max-md:flex">
+            <h3 className="font-extrabold  mt-2.5 mb-2 sm:max-md:ml-8">
+              Телефон *
+            </h3>
+            <div className="sm:max-md:flex-col sm:max-md:flex sm:max-md:self-center sm:max-md:gap-4">
               <select className="bg-gray-700 text-white mr-5 w-72 h-10">
                 <option value="number">+996</option>
                 <option value="number">+7</option>
@@ -86,11 +88,11 @@ const RentCarPage = () => {
                //!Вам необходимо дать согласие перед отправкой своих личных данных
                //!</p> */}
           </div>
-          <div className="mt-6 ml-[555px]">
-            <button className="bg-gray-700 text-white mr-4 py-2 px-[36px]">
+          <div className="mt-6 ml-[555px] sm:max-md:flex-col sm:max-md:flex sm:max-md:self-center sm:max-md:ml-[0] sm:max-md:gap-4">
+            <button className="bg-gray-700 text-white mr-4 py-2 px-[36px] sm:max-md:w-full">
               Очистить
             </button>
-            <button className="bg-gray-700 text-white py-2 px-[30.5px] ">
+            <button className="bg-gray-700 text-white py-2 px-[30.5px] sm:max-md:w-full">
               Отправить
             </button>
           </div>
