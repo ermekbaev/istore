@@ -114,7 +114,6 @@ const MainRoutes = () => {
       element: <EditProductPage />,
       id: 18,
     },
-
   ];
 
   return (

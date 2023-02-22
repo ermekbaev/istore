@@ -122,7 +122,7 @@ const EditProduct = () => {
               />
             </div>
           </div>
-          <img width={930} src={oneProduct?.image} alt="" />
+
           <div>
             <label
               htmlFor="picture"
