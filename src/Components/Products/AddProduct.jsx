@@ -10,6 +10,8 @@ const AddProduct = () => {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
+  const [stock, setStock] = useState("");
+  // const [owner, setOwner] = useState(null);
 
   useEffect(() => {
     getCategories();
@@ -22,6 +24,9 @@ const AddProduct = () => {
     newProduct.append("price", price);
     newProduct.append("category", category);
     newProduct.append("image", image);
+    newProduct.append("stock", stock);
+    // newProduct.append("owner", owner);
+
     createProduct(newProduct);
   }
 
@@ -44,8 +49,8 @@ const AddProduct = () => {
             <option value="">choose category</option>
 
             {categories.map((item) => (
-              <option key={item.id} value={item.id}>
-                {item.title}
+              <option key={item.slug} value={item.slug}>
+                {item.name}
               </option>
             ))}
           </select>
@@ -88,6 +93,7 @@ const AddProduct = () => {
               />
             </div>
           </div>
+
           <div>
             <label
               htmlFor="price"
@@ -117,17 +123,57 @@ const AddProduct = () => {
             </label>
             <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
               <input
-                onChange={(e) => setImage(e.target.value)}
-                type="text"
+                accept="image/*"
+                onChange={(e) => setImage(e.target.files[0])}
+                type="file"
                 id="picture"
-                minLength="8"
                 className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
               text-sm pl-10 w-full"
                 placeholder="Picture"
               />
             </div>
           </div>
-          <button onClick={handleSave}>Вход</button>
+
+          <div>
+            <label
+              htmlFor="Stock"
+              className="float-left block text-sm font-medium text-gray-700"
+            >
+              stock
+            </label>
+            <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
+              <input
+                onChange={(e) => setStock(e.target.value)}
+                type="text"
+                id="stock"
+                className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
+              text-sm pl-10 w-full"
+                placeholder="Stock"
+              />
+            </div>
+          </div>
+          {/* 
+          <div>
+            <label
+              htmlFor="owner"
+              className="float-left block text-sm font-medium text-gray-700"
+            >
+              owner
+            </label>
+            <div className="mx-auto relative rounded-md shadow-sm mt-1 ">
+              <input
+                onChange={(e) => setOwner(e.target.value)}
+                type="id"
+                id="owner"
+                className="border-gray-300 rounded-md focus:border-green-500 focus:ring-green-500
+              text-sm pl-10 w-full"
+                placeholder="Owner
+                "
+              />
+            </div>
+          </div> */}
+
+          <button onClick={handleSave}>Добавить</button>
         </form>
       </div>
     </div>

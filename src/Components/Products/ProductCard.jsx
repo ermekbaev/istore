@@ -10,9 +10,10 @@ const ProductCard = ({ item }) => {
       <img src={item.image} width="200" alt="" />
       <h3>{item.title}</h3>
       <p>{item.price}</p>
-      <p>{item.category.title}</p>
+      <p>{item.category}</p>
       <p>{item.description}</p>
-      <p>{item.likes}</p>
+      <p>{item.stock}</p>
+      <p>{item.owner_email}</p>
 
       {item.is_author ? (
         <>
