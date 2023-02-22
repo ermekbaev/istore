@@ -29,8 +29,7 @@ function reducer(state = INIT_STATE, action) {
   }
 }
 
-const API = "http://34.173.115.25/api/v1";
-
+const API = "http://34.133.58.163/api/v1";
 const ProductContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -43,7 +42,6 @@ const ProductContextProvider = ({ children }) => {
           Authorization,
         },
       };
-
       const res = await axios.get(
         `${API}/products/${window.location.search}`,
         config
@@ -61,10 +59,11 @@ const ProductContextProvider = ({ children }) => {
           Authorization,
         },
       };
-      const res = await axios.get(`${API}/category/list/`, config);
+      const res = await axios.get(`${API}/categories/`, config);
+      console.log(res);
       dispatch({
         type: "GET_CATEGORIES",
-        payload: res.data.results,
+        payload: res.data,
       });
     } catch (error) {
       console.log(error);
@@ -81,11 +80,8 @@ const ProductContextProvider = ({ children }) => {
         },
       };
       const res = await axios.post(`${API}/products/`, newProduct, config);
+      console.log(res);
       navigate("/products");
-      dispatch({
-        type: "CREATE_PRODUCT",
-        payload: res.data.results,
-      });
     } catch (error) {
       console.log(error);
     }

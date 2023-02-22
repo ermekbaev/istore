@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../Contexts/AuthContextProvider";
 import avatar from "./images/avatar.png";
@@ -23,9 +23,14 @@ const auth = [
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
-  const navigate = useNavigate();
 
-  const { user, handleLogout, chekAuth } = useAuth();
+  const { user, handleLogout, checkAuth } = useAuth();
+
+  useEffect(() => {
+    if (localStorage.getItem("tokens")) {
+      checkAuth();
+    }
+  }, []);
 
   return (
     <div>

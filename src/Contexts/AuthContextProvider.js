@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -44,7 +43,7 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const checkAuth = async () => {
-    setLoading(true);
+    // setLoading(true);
 
     try {
       const tokens = JSON.parse(localStorage.getItem("tokens"));
@@ -56,7 +55,7 @@ const AuthContextProvider = ({ children }) => {
         },
       };
 
-      const res = await axios.post(`${API}/account/token/refresh/`, {
+      const res = await axios.post(`${API}/account/refresh/`, {
         refresh: tokens.refresh,
         config,
       });
@@ -64,7 +63,7 @@ const AuthContextProvider = ({ children }) => {
         "tokens",
         JSON.stringify({
           access: res.data.access,
-          refresh: tokens.refresh,
+          refresh: res.data.refresh,
         })
       );
       const email = localStorage.getItem("email");
@@ -95,7 +94,6 @@ const AuthContextProvider = ({ children }) => {
     handleLogout,
   };
   return <authContext.Provider value={values}>{children}</authContext.Provider>;
-
 };
 
 export default AuthContextProvider;
