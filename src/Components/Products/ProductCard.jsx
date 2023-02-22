@@ -5,6 +5,7 @@ import { useProducts } from "../../Contexts/ProductContextProvider";
 const ProductCard = ({ item }) => {
   const { deleteProduct } = useProducts();
   const navigate = useNavigate();
+  console.log(item, "ffffffffffffffffffffffffff");
   return (
     <div className="border border-dark m-3">
       <img src={item.image} width="200" alt="" />

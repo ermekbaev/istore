@@ -13,14 +13,15 @@ const AddProduct = () => {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
-  const [stock, setStock] = useState([]);
-  const [owner, setOwner] = useState(null);
+  const [stock, setStock] = useState("");
+  const [owner, setOwner] = useState(0);
 
   useEffect(() => {
     getCategories();
   }, []);
 
-  function handleSave() {
+  function handleSave(e) {
+    e.preventDefault();
     let newProduct = new FormData();
     newProduct.append("title", title);
     newProduct.append("description", description);

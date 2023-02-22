@@ -1,24 +1,48 @@
 import React, { useEffect, useState } from "react";
+import { useProducts } from "../Contexts/ProductContextProvider";
+import { useSearchParams } from "react-router-dom";
 
 const Pagination = () => {
+  const { getProducts, pages } = useProducts();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(10);
+
+  function getPagesCount() {
+    let pageCountArr = [];
+
+    for (let i = 1; i <= pages; i++) {
+      pageCountArr.push(i);
+    }
+
+    return pageCountArr;
+  }
 
   const handlePreviousPage = () => {
-    if (currentPage > 1) {
+    if (currentPage - 1) {
       setCurrentPage(currentPage - 1);
     }
   };
 
   const handleNextPage = () => {
-    if (currentPage < totalPages) {
+    if (currentPage + 1) {
       setCurrentPage(currentPage + 1);
     }
   };
 
   useEffect(() => {
+    getProducts();
     // make API request for data on current page
+  }, []);
+
+  useEffect(() => {
+    setSearchParams({
+      page: currentPage,
+    });
   }, [currentPage]);
+
+  useEffect(() => {
+    getProducts();
+  }, [searchParams]);
 
   return (
     <div className="bg-gray-100 rounded-full flex items-center px-4 py-2 mu">
@@ -29,7 +53,7 @@ const Pagination = () => {
         Previous
       </button>
       <div className="flex items-center justify-center w-16">
-        {currentPage} of {totalPages}
+        {getPagesCount().map((item) => item === currentPage && item)}
       </div>
       <button
         className="bg-gray-200 text-gray-700 rounded-full py-2 px-4 ml-2"
