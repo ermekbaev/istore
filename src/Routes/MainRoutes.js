@@ -108,11 +108,13 @@ const MainRoutes = () => {
       element: <SpessPage />,
       id: 17,
     },
+
     {
       link: "/edit/:id",
       element: <EditProductPage />,
       id: 18,
     },
+
   ];
 
   return (
