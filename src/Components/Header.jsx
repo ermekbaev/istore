@@ -38,7 +38,7 @@ const Header = () => {
       <div className="flex items-center justify-between  py-2  w-full h-20">
         <nav className="flex items-center mr-5">
           <a href="/">
-            <h3 className=" w-1/6 text-center mx-5">LOGO</h3>
+            <h3 className=" w-1/6 text-center mx-5">CarRo</h3>
             {/* <img
               className=" w-1/6 w-10 text-center mr-5 ml-5"
               src={one_1}
