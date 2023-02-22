@@ -46,6 +46,7 @@ const ProductContextProvider = ({ children }) => {
         `${API}/products/${window.location.search}`,
         config
       );
+      console.log(res);
       dispatch({ type: "GET_PRODUCTS", payload: res.data });
     } catch (error) {}
   };
@@ -60,7 +61,6 @@ const ProductContextProvider = ({ children }) => {
         },
       };
       const res = await axios.get(`${API}/categories/`, config);
-      console.log(res);
       dispatch({
         type: "GET_CATEGORIES",
         payload: res.data,
@@ -81,7 +81,7 @@ const ProductContextProvider = ({ children }) => {
       };
       const res = await axios.post(`${API}/products/`, newProduct, config);
       console.log(res);
-      navigate("/products");
+      navigate("/models");
     } catch (error) {
       console.log(error);
     }
@@ -96,7 +96,7 @@ const ProductContextProvider = ({ children }) => {
           Authorization,
         },
       };
-      await axios.delete(`${API}/products/${id}/`, config);
+      const res = await axios.delete(`${API}/products/${id}/`, config);
       getProducts();
     } catch (error) {
       console.log(error);

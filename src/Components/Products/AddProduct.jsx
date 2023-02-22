@@ -5,13 +5,16 @@ import { useProducts } from "../../Contexts/ProductContextProvider";
 const AddProduct = () => {
   const { getCategories, categories, createProduct } = useProducts();
 
+  let AutoComplete = require("autocomplete-js");
+  AutoComplete();
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
-  const [stock, setStock] = useState("");
-  // const [owner, setOwner] = useState(null);
+  const [stock, setStock] = useState([]);
+  const [owner, setOwner] = useState(null);
 
   useEffect(() => {
     getCategories();
@@ -25,7 +28,7 @@ const AddProduct = () => {
     newProduct.append("category", category);
     newProduct.append("image", image);
     newProduct.append("stock", stock);
-    // newProduct.append("owner", owner);
+    newProduct.append("owner", owner);
 
     createProduct(newProduct);
   }
@@ -152,7 +155,7 @@ const AddProduct = () => {
               />
             </div>
           </div>
-          {/* 
+
           <div>
             <label
               htmlFor="owner"
@@ -171,7 +174,7 @@ const AddProduct = () => {
                 "
               />
             </div>
-          </div> */}
+          </div>
 
           <button onClick={handleSave}>Добавить</button>
         </form>
