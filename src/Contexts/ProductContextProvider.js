@@ -45,17 +45,6 @@ const ProductContextProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
     }
-    // try {
-    //   const tokens = JSON.parse(localStorage.getItem("tokens"));
-    //   const Authorization = `Bearer ${tokens.access}`;
-    //   const config = {
-    //     headers: {
-    //       Authorization,
-    //     },
-    //   };
-    // } catch (error) {
-    // console.log(error);
-    // }
   };
 
   const getCategories = async () => {
@@ -148,9 +137,7 @@ const ProductContextProvider = ({ children }) => {
         config
       );
       navigate("/products");
-      console.log(res);
     } catch (error) {
-      console.log(error);
     }
   };
 

@@ -18,6 +18,7 @@ import RemPage from "../pages/RemPage";
 import SpessPage from "../pages/SpessPage";
 import SparePage from "../pages/SparePage";
 import RegisterSuccess from "../Components/Auth/RegisterSuccess";
+import EditProductPage from "../pages/EditProductPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -78,39 +79,39 @@ const MainRoutes = () => {
       id: 11,
     },
     {
-      link: "/addproduct",
-      element: <AddProduct />,
+      link: "/register-success",
+      element: <RegisterSuccess />,
       id: 12,
     },
     {
-      link: "*",
-      element: <h1>NON FOUND PAGE</h1>,
-      id: 12,
+      link: "/addproduct",
+      element: <AddProduct />,
+      id: 13,
     },
     {
       link: "/guarant",
       element: <GuarantPage />,
-      id: 13,
+      id: 14,
     },
     {
       link: "/rem",
       element: <RemPage />,
-      id: 14,
+      id: 15,
     },
     {
       link: "/spare",
       element: <SparePage />,
-      id: 15,
+      id: 16,
     },
     {
       link: "/spess",
       element: <SpessPage />,
-      id: 16,
+      id: 17,
     },
     {
-      link: "/register-success",
-      element: <RegisterSuccess />,
-      id: 11,
+      link: "/edit/:id",
+      element: <EditProductPage />,
+      id: 18,
     },
   ];
 

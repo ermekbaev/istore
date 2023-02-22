@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 import { useProducts } from "../../Contexts/ProductContextProvider";
 
 const AddProduct = () => {
   const { getCategories, categories, createProduct } = useProducts();
-
-  let AutoComplete = require("autocomplete-js");
-  AutoComplete();
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
