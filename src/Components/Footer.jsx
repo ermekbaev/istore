@@ -8,27 +8,29 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row">
           <div className="md:w-3/12 pr-10.5">
             <h3 className="text-black text-2xl cursor-pointer capitalize">
-              MONKEYNFT
+              CarRo
             </h3>
             <p className="text-gray-700 text-base py-6 ">
-              The largest NFT Marketplace. Unique and authentic digital
-              creations. Made possible by blockchain technology.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              deserunt quidem quam quas pariatur delectus, accusantium saepe
+              placeat deleniti adipisci. Qui unde sint, cum ipsam assumenda rem?
+              Quos, reprehenderit rem?
             </p>
             <ul className="flex text-gray-700 cursor-pointer">
               <li className="pr-2">
-                <a>logo</a>
+                <a>Lorem, ipsum.</a>
               </li>
               <li className="pr-2">
-                <a>logo</a>
+                <a>Lorem, ipsum.</a>
               </li>
               <li className="pr-2">
-                <a>logo</a>
+                <a>Lorem, ipsum.</a>
               </li>
               <li className="pr-2">
-                <a>logo</a>
+                <a>Lorem, ipsum.</a>
               </li>
               <li className="pr-2">
-                <a>logo</a>
+                <a>Lorem, ipsum.</a>
               </li>
             </ul>
           </div>
