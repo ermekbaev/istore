@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../Contexts/AuthContextProvider";
 import avatar from "./images/avatar.png";
+import one_1 from "../Components/images/logo.png";
 
 const pages = [
   { name: "Главная", link: "/", id: 1 },
@@ -10,7 +11,7 @@ const pages = [
   { name: "Аренда авто", link: "/rent", id: 4 },
   { name: "Detailing Studio", link: "/detailing", id: 5 },
   { name: "Покупка", link: "/buy", id: 6 },
-  { name: "Для бизнеса", link: "/buisness", id: 7 },
+  { name: "Для бизнеса", link: "/business", id: 7 },
   { name: "Сервис", link: "/servises", id: 8 },
 ];
 
@@ -33,11 +34,16 @@ const Header = () => {
   }, []);
 
   return (
-    <div>
+    <div className="sticky top-0 backdrop-blur-sm bg-white/30">
       <div className="flex items-center justify-between  py-2  w-full h-20">
         <nav className="flex items-center mr-5">
           <a href="/">
             <h3 className=" w-1/6 text-center mx-5">LOGO</h3>
+            {/* <img
+              className=" w-1/6 w-10 text-center mr-5 ml-5"
+              src={one_1}
+              alt="LOGO"  
+            /> */}
           </a>
           <section className="MOBILE-MENU flex lg:hidden">
             <div

@@ -10,7 +10,7 @@ import one_8 from "../Components/images/7.buss.png";
 import one_9 from "../Components/images/3.buss.png";
 import one_10 from "../Components/images/4.buss.png";
 
-const ForBisnessPage = () => {
+const ForBusinessPage = () => {
   return (
     <div>
       <img className="w-full" src={one_1} alt="фото машины" />
@@ -74,9 +74,9 @@ const ForBisnessPage = () => {
       </div>
       <div>
         <h2 className="text-3xl text-center max-lg:text-2xl mb-20">
-          МОДЕЛЬНЫЙ РЯД
+          МАШИННЫЙ РЯД
         </h2>
-        <div className="flex flex-wrap mx-10">
+        <div className="grid gap-x-8 gap-y-4 grid-cols-3">
           <div>
             <img className="" src={one_2} alt="фото машины" />
             <p></p>
@@ -84,31 +84,31 @@ const ForBisnessPage = () => {
           <div>
             <img className="" src={one_3} alt="фото машины" />
             <p></p>
-          </div>{" "}
+          </div>
           <div>
             <img className="" src={one_4} alt="фото машины" />
             <p></p>
-          </div>{" "}
+          </div>
           <div>
             <img className="" src={one_5} alt="фото машины" />
             <p></p>
-          </div>{" "}
+          </div>
           <div>
             <img className="" src={one_6} alt="фото машины" />
             <p></p>
-          </div>{" "}
+          </div>
           <div>
             <img className="" src={one_7} alt="фото машины" />
             <p></p>
-          </div>{" "}
+          </div>
           <div>
             <img className="" src={one_8} alt="фото машины" />
             <p></p>
-          </div>{" "}
+          </div>
           <div>
             <img className="" src={one_9} alt="фото машины" />
             <p></p>
-          </div>{" "}
+          </div>
           <div>
             <img className="" src={one_10} alt="фото машины" />
             <p></p>
@@ -119,4 +119,4 @@ const ForBisnessPage = () => {
   );
 };
 
-export default ForBisnessPage;
+export default ForBusinessPage;

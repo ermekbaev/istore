@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AutoMileagePage from "../pages/AutoMileagePage";
 import BuyCarPage from "../pages/BuyCarPage";
 import DetailingStudio from "../pages/DeteilingStudioPage";
-import ForBisnessPage from "../pages/ForBisnessPage";
+import ForBusinessPage from "../pages/ForBusinessPage";
 import HomePage from "../pages/HomePage";
 import ModelsPage from "../pages/ModelsPage";
 import NotFoundPage from "../pages/NotFoundPage";
@@ -13,7 +13,10 @@ import ServisesCar from "../pages/ServisesCar";
 import Login from "../Components/Auth/Login";
 import Register from "../Components/Auth/Register";
 import AddProduct from "../Components/Products/AddProduct";
-import RegisterSuccess from "../Components/Auth/RegisterSuccess";
+import GuarantPage from "../pages/GuarantPage";
+import RemPage from "../pages/RemPage";
+import SpessPage from "../pages/SpessPage";
+import SparePage from "../pages/SparePage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -54,12 +57,12 @@ const MainRoutes = () => {
       id: 7,
     },
     {
-      link: "/buisness",
-      element: <ForBisnessPage />,
+      link: "/business",
+      element: <ForBusinessPage />,
       id: 8,
     },
     {
-      link: "/edit/:id",
+      link: "/servises",
       element: <ServisesCar />,
       id: 9,
     },
@@ -71,12 +74,37 @@ const MainRoutes = () => {
     {
       link: "/login",
       element: <Login />,
-      id: 9,
+      id: 11,
     },
     {
       link: "/addproduct",
       element: <AddProduct />,
-      id: 10,
+      id: 12,
+    },
+    {
+      link: "*",
+      element: <h1>NON FOUND PAGE</h1>,
+      id: 12,
+    },
+    {
+      link: "/guarant",
+      element: <GuarantPage />,
+      id: 13,
+    },
+    {
+      link: "/rem",
+      element: <RemPage />,
+      id: 14,
+    },
+    {
+      link: "/spare",
+      element: <SparePage />,
+      id: 15,
+    },
+    {
+      link: "/spess",
+      element: <SpessPage />,
+      id: 16,
     },
     {
       link: "/register-success",
