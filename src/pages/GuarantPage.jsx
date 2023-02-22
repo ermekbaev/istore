@@ -4,7 +4,7 @@ import one_1 from "../Components/images/1.gar.png";
 const GuarantPage = () => {
   return (
     <div>
-      <img className="w-full" src={one_1} al  t="фото машины" />
+      <img className="w-full" src={one_1} al t="фото машины" />
       <div>
         <div className="mt-20 mb-20 mx-24">
           <h2 className="text-3xl text-center max-lg:text-2xl">
@@ -103,7 +103,9 @@ const GuarantPage = () => {
           </h2>
         </div>
         <button className="m-10 pt-3.5 pb-3 px-7 bg-gray-800 text-white">
-          <a href="#">Запис на сервер</a>
+          <a href="https://www.toyota-bishkek.kg/forms/book-a-service">
+            Запис на сервер
+          </a>
         </button>
       </div>
       <div className="bg-gray-800 text-white pt-20 pb-24 text-center">

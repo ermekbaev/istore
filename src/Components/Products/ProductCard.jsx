@@ -18,8 +18,10 @@ const ProductCard = ({ item }) => {
       <p>{item.price}</p>
       <p>{item.category}</p>
       <p>{item.description}</p>
+
       {/* <p>{item.stock}</p> */}
       {/* <p>{item.owner_email}</p> */}
+
 
       {item.is_author ? (
         <>
